@@ -119,7 +119,7 @@ a.skip:focus{
 .flip-card-inner{
 	position: relative;
 	width: 100%;
-	height: 21em;
+	height: 14em;
 	text-align: center;
 	transition: transform 0.6s;
 	transform-style: preserve-3d;
@@ -136,13 +136,14 @@ a.skip:focus{
 	backface-visibility: hidden;
 }
 .flip-card-front{
-	background-color: #bbbbbb;
+	background-color: #f4eeff;
 	color: #000000;
 	overflow: hidden;
 }
 .flip-card-back{
 	background-color: #8e81e4;
 	transform: rotateY(180deg);
+	overflow: auto;
 }
 .flip-card-back h3{
 	text-align: center;
