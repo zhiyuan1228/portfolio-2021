@@ -19,13 +19,14 @@ footer{
 	/* margin-top: 2em; */
 	width: 100%;
 	background-color: #424874;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 footer p{
-	text-align: center;
 	color: #f4eeff;
 	/* font-family: 'Times New Roman', sans-serif; */
 	font-size: 1.2em;
-	padding: 1em
 }
 .grid{
 	display: grid;
@@ -204,6 +205,7 @@ form{
 	font-family: Arial;
 	width: 80%;
 	margin: 0 auto;
+	padding: 1em 0;
 }
 input, textarea{
 	width: 100%;
@@ -240,6 +242,9 @@ input[type=submit]:hover{
   }
 
 @media screen and (min-width: 768px){
+	p{
+		font-size: 1.1em;
+	}
 	.nav_links{
 		flex-direction: row;
 	}
@@ -249,10 +254,14 @@ input[type=submit]:hover{
 	.content{
 		padding: 1.5em;
 	}
-	/* index.html */
 	.grid{
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 1.5em;
+	}
+
+	/* index.html */
+	.home img{
+		align-self: stretch;
+		object-fit: cover;
 	}
 	.flip-card-inner{
 		height: 17em;
@@ -288,6 +297,8 @@ input[type=submit]:hover{
 	/* contact.html */
 	form{
 		width: 500px;
+		font-size: 1.2em;
+		padding: 2em 0;
 	}
 	input{
 		width: 40%;
@@ -295,4 +306,78 @@ input[type=submit]:hover{
 	input[type=submit]{
 		width: 40%;	}
 
+}
+@media screen and (min-width: 992px){
+	header, p{
+		font-size: 1.2em;
+	}
+	h1{
+		font-size: 1.6em;
+	}
+	h2{
+		font-size: 1.6em;
+	}
+	h3{
+		font-size: 1.5em;
+	}
+	footer{
+		height: 8em;
+	}
+	footer p{
+		font-size: 1.4em;
+	}
+	.home .content{
+		padding: 2em;
+	}
+	.grid{
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 1.8em;
+		padding: 0 3em 3em 3em;
+	}
+
+	/* index.html */
+	.home .content{
+		grid-column: 2/4;
+	}
+	.flip-card-inner{
+		height: 20em;
+	}
+
+	/* projects.html */
+	.project>img{
+		height: 17em;
+	}
+
+	/* photos.html */
+	.gallery>img{
+		padding: 0 1em 2em 1em;
+		width: 33%;
+	}
+	@-webkit-keyframes photo_grow{
+		from {width: 28%; opacity: 0;}
+		to {width: 33%; opacity: 1;}
+	}
+	@keyframes photo_grow{
+		from {width: 28%; opacity: 0;}
+		to {width: 33%; opacity: 1;}
+	}
+	.photos{
+		grid-template-columns: 100%;
+	} 
+
+	/* contact.html */
+	form{
+		width: 800px;
+		font-size: 1.4em;
+		padding: 2em 0;
+	}
+	input{
+		width: 40%;
+	}
+	input[type=submit]{
+		width: 30%;	
+	}
+	textarea{
+		height: 10em;
+	}
 }
